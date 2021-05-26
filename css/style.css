@@ -54,8 +54,15 @@ button:hover {
 .header_top {
   background-image: url(../image/mainbg01.jpg);
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   color: #ffffff;
+  min-height: 100vh;
+  background-origin: padding-box;
+  /* header
+   -------------------------------------------------------------------------- */
+  /* top
+  -------------------------------------------------------------------------- */
 }
 
 .header_top header {
@@ -66,6 +73,11 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .header_top header .left_block {
@@ -112,15 +124,83 @@ button:hover {
   margin-right: 10px;
 }
 
-.header_top .top {
-  position: relative;
-}
-
 .header_top .top .top_word {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  margin-top: 282px;
   font-size: 34px;
   font-weight: bold;
+  padding-top: 362px;
+  margin-left: 75%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+/*===========================================================================
+# philosophy
+=========================================================================== */
+.philosophy {
+  position: relative;
+  background-image: url(../image/bg.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  height: 681px;
+  width: 100%;
+  padding-top: 149px;
+}
+
+.philosophy .container {
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.philosophy .philosophy_title_area {
+  font-size: 28px;
+}
+
+.philosophy .philosophy_sentence_area {
+  margin: 0 118px;
+}
+
+/*===========================================================================
+# feature
+=========================================================================== */
+.feature {
+  padding-top: 106px;
+  padding-bottom: 78px;
+}
+
+.feature .feature_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feature .feature_area:nth-child(2) {
+  margin: 122px 0;
+}
+
+.feature .feature_area .feature_picture {
+  width: 54.6875%;
+}
+
+.feature .feature_area .feature_picture img {
+  width: 100%;
+}
+
+.feature .feature_area .feature_contents {
+  width: 38.2%;
+}
+
+.feature .feature_area .feature_contents .feature_title {
+  font-size: 32px;
+  line-height: 1.7;
 }
