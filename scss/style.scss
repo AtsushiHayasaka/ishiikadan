@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import "color";
+@import "font-family";
+@import "variable.scss";
+
+body {
+    line-height: 2;
+    color: $color-text-base; /*都度変更*/
+    font-family: $font-family-default; /*都度変更*/
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $color-text-base; /*都度変更*/
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 1180px) {
+    .container {
+      padding: 0 4%;
+    }
+  }
+
+/*===========================================================================
+# header_top
+=========================================================================== */
+  .header_top {
+    background-image: url(../image/mainbg01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+   
+
+    header {
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        
+        .left_block {
+            display: flex;
+            
+            .logo {
+                margin: 20px 0;
+                margin-right: 120px;
+            }
+
+            .header_menu {
+                display: flex;
+                justify-content: center;
+                
+                .menu_item {
+                    line-height: 80px;
+                    &:nth-child(2) {
+                        margin: 0 30px;
+                    }
+                    a {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .right_block {
+            .reserve {
+                line-height: 1;
+                padding: 19px 37px;
+                background-color: $color-active;
+                color: #ffffff;
+                margin: 13px 0;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .top {
+        position: relative;
+        .top_word {
+
+            writing-mode: vertical-rl;
+            margin-top: 282px;
+            font-size: 34px;
+            font-weight: bold;
+  
+            
+        }
+    }
+  }
