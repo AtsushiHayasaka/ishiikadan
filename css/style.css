@@ -173,6 +173,12 @@ button:hover {
 .feature {
   padding-top: 106px;
   padding-bottom: 78px;
+  /* feature_room
+  -------------------------------------------------------------------------- */
+  /* feature_menu
+  -------------------------------------------------------------------------- */
+  /* feature_onsen
+  -------------------------------------------------------------------------- */
 }
 
 .feature .feature_area {
@@ -190,17 +196,60 @@ button:hover {
 
 .feature .feature_area .feature_picture {
   width: 54.6875%;
+  height: 545px;
 }
 
 .feature .feature_area .feature_picture img {
+  height: 100%;
   width: 100%;
 }
 
 .feature .feature_area .feature_contents {
   width: 38.2%;
+  margin-top: 20px;
 }
 
 .feature .feature_area .feature_contents .feature_title {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.7;
 }
+
+@media screen and (max-width: 1180px) {
+  .feature .feature_area .feature_contents .feature_title {
+    font-size: 32px;
+  }
+}
+
+.feature .feature_area .feature_contents .feature_sentence {
+  width: 58.76%;
+  margin: 75px 0;
+}
+
+.feature .feature_area .feature_contents .about_btn .about {
+  padding: 22px 52px;
+  border: 1px solid #707070;
+  background-color: #fff;
+  line-height: 1;
+}
+
+.feature .feature_room .feature_contents .feature_sentence {
+  width: 56.72%;
+}
+
+.feature .feature_menu {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.feature .feature_menu .feature_contents .feature_sentence {
+  width: 39.27%;
+}
+
+/*===========================================================================
+# stay_plan
+=========================================================================== */

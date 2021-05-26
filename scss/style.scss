@@ -169,19 +169,71 @@ body {
 
     .feature_picture {
       width: 54.6875%;
+      height: 545px;
 
       img {
+        height: 100%;
         width: 100%;
       }
     }
 
     .feature_contents {
       width: 38.2%;
+      margin-top: 20px;
       .feature_title {
-        font-size: 32px;
+        font-size: 36px;
+        @include mq(xl) {
+          font-size: 32px;
+        }
         line-height: 1.7;
+      }
+      .feature_sentence {
+        width: 58.76%;
+        margin: 75px 0;
+      }
 
+      .about_btn {
+        .about {
+          padding: 22px 52px;
+          border: 1px solid #707070;
+          background-color: #fff;
+          line-height: 1;
+        }
       }
     }
   }
+
+  /* feature_room
+  -------------------------------------------------------------------------- */
+  .feature_room {
+    .feature_contents {
+      .feature_sentence {
+        width: 56.72%;
+      }
+    }
+  }
+
+  /* feature_menu
+  -------------------------------------------------------------------------- */
+  .feature_menu {
+    flex-direction: row-reverse;
+    justify-content: center;
+    .feature_contents {
+      .feature_sentence {
+        width: 39.27%;
+      }
+    }
+  }
+  /* feature_onsen
+  -------------------------------------------------------------------------- */
+
+
+
+}
+
+/*===========================================================================
+# stay_plan
+=========================================================================== */
+.stay_pran {
+
 }
