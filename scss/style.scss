@@ -169,9 +169,19 @@ body {
 
     .feature_picture {
       width: 54.6875%;
-      height: 545px;
+      position: relative;
+      height: 0;
+      padding-top: 28.4375%;
+      @include mq(xl) {
+        width: 58%;
+        height: 420px;
+      }
+
 
       img {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
       }
@@ -182,14 +192,13 @@ body {
       margin-top: 20px;
       .feature_title {
         font-size: 36px;
+        line-height: 1.72;
         @include mq(xl) {
           font-size: 32px;
         }
-        line-height: 1.7;
       }
       .feature_sentence {
-        width: 58.76%;
-        margin: 75px 0;
+        margin: 54px 0 67px;
       }
 
       .about_btn {
@@ -203,37 +212,82 @@ body {
     }
   }
 
-  /* feature_room
-  -------------------------------------------------------------------------- */
-  .feature_room {
-    .feature_contents {
-      .feature_sentence {
-        width: 56.72%;
-      }
-    }
-  }
-
   /* feature_menu
   -------------------------------------------------------------------------- */
   .feature_menu {
     flex-direction: row-reverse;
-    justify-content: center;
+    
     .feature_contents {
+      margin-left: 21.25%!important;
+    @include mq(xl) {
+      margin-left: 4%!important;
+    }
       .feature_sentence {
-        width: 39.27%;
+
       }
     }
   }
-  /* feature_onsen
-  -------------------------------------------------------------------------- */
 
 
 
 }
+/*===========================================================================
+# section_common
+=========================================================================== */
+section {
+  padding-top: 60px;
+  .section_title {
+    text-align: center;
+    line-height: 1;
+    font-size: 36px;
+    &::before {
+      content: '';
+      background-image: url(../image/logo02.png);
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    @include mq(xl) {
+      font-size: 32px;
+    }
+  }
+
+}
+
 
 /*===========================================================================
 # stay_plan
 =========================================================================== */
-.stay_pran {
+.stay_plan {
+  background-image: url(../image/bg02.png);
+  background-repeat: no-repeat;
+  padding-bottom: 136px;
+  .stay_plan_flex {
+    display: flex;
+    justify-content: space-between;
+    @include mq(xl) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    margin-top: 66px;
+    .stay_plan_area {
+      width: 28.05%;
+      @include mq(xl) {
+        width: 100%
+      }
+      .stay_plan_contents {
 
+        .plan_title {
+          font-size: 20px;
+          line-height: 1.6;
+          margin-top: 26px;
+        }
+        .plan_description {
+          margin-top: 22px;
+        }
+      }
+    }
+  }
 }

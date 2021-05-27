@@ -173,11 +173,7 @@ button:hover {
 .feature {
   padding-top: 106px;
   padding-bottom: 78px;
-  /* feature_room
-  -------------------------------------------------------------------------- */
   /* feature_menu
-  -------------------------------------------------------------------------- */
-  /* feature_onsen
   -------------------------------------------------------------------------- */
 }
 
@@ -196,10 +192,22 @@ button:hover {
 
 .feature .feature_area .feature_picture {
   width: 54.6875%;
-  height: 545px;
+  position: relative;
+  height: 0;
+  padding-top: 28.4375%;
+}
+
+@media screen and (max-width: 1180px) {
+  .feature .feature_area .feature_picture {
+    width: 58%;
+    height: 420px;
+  }
 }
 
 .feature .feature_area .feature_picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }
@@ -211,7 +219,7 @@ button:hover {
 
 .feature .feature_area .feature_contents .feature_title {
   font-size: 36px;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 @media screen and (max-width: 1180px) {
@@ -221,8 +229,7 @@ button:hover {
 }
 
 .feature .feature_area .feature_contents .feature_sentence {
-  width: 58.76%;
-  margin: 75px 0;
+  margin: 54px 0 67px;
 }
 
 .feature .feature_area .feature_contents .about_btn .about {
@@ -232,24 +239,95 @@ button:hover {
   line-height: 1;
 }
 
-.feature .feature_room .feature_contents .feature_sentence {
-  width: 56.72%;
-}
-
 .feature .feature_menu {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.feature .feature_menu .feature_contents .feature_sentence {
-  width: 39.27%;
+.feature .feature_menu .feature_contents {
+  margin-left: 21.25% !important;
+}
+
+@media screen and (max-width: 1180px) {
+  .feature .feature_menu .feature_contents {
+    margin-left: 4% !important;
+  }
+}
+
+/*===========================================================================
+# section_common
+=========================================================================== */
+section {
+  padding-top: 60px;
+}
+
+section .section_title {
+  text-align: center;
+  line-height: 1;
+  font-size: 36px;
+}
+
+section .section_title::before {
+  content: '';
+  background-image: url(../image/logo02.png);
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+  section .section_title {
+    font-size: 32px;
+  }
 }
 
 /*===========================================================================
 # stay_plan
 =========================================================================== */
+.stay_plan {
+  background-image: url(../image/bg02.png);
+  background-repeat: no-repeat;
+  padding-bottom: 136px;
+}
+
+.stay_plan .stay_plan_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 66px;
+}
+
+@media screen and (max-width: 1180px) {
+  .stay_plan .stay_plan_flex {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.stay_plan .stay_plan_flex .stay_plan_area {
+  width: 28.05%;
+}
+
+@media screen and (max-width: 1180px) {
+  .stay_plan .stay_plan_flex .stay_plan_area {
+    width: 100%;
+  }
+}
+
+.stay_plan .stay_plan_flex .stay_plan_area .stay_plan_contents .plan_title {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 26px;
+}
+
+.stay_plan .stay_plan_flex .stay_plan_area .stay_plan_contents .plan_description {
+  margin-top: 22px;
+}
