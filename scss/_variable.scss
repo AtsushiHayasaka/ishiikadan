@@ -5,7 +5,7 @@ $breakpoints: (
   'pc': 'screen and (min-width: 769px)', //769px以上（デカダブ・pc用）用の表示
   'lg': 'screen and (max-width: 1024px)', 
   'xl': 'screen and (max-width: 1180px)',
-  'xxl': 'screen and (max-width: 1180px)',
+  'xxl': 'screen and (min-width: 1181px)',
    
 ) ;
 

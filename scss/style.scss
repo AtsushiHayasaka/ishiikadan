@@ -48,6 +48,12 @@ body {
     }
   }
 
+  .only-max {
+    @include mq(xl) {
+      display: none;
+    }
+  }
+
 /*===========================================================================
 # header_top
 =========================================================================== */
@@ -222,9 +228,7 @@ body {
     @include mq(xl) {
       margin-left: 4%!important;
     }
-      .feature_sentence {
-
-      }
+     
     }
   }
 
@@ -363,5 +367,127 @@ section {
         }
       }
     }
+  }
+}
+
+/*===========================================================================
+# access
+=========================================================================== */
+.access {
+  background-image: url(../image/bg.png);
+  padding-bottom: 110px;
+
+  .address_area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+
+    .address_image {
+      width: 55.6%;
+    }
+
+    .address_info {
+      width: calc(100% - 55.6% - 83px);
+      margin-left: 83px;
+
+      .address_info_contents {
+        .contents_title {
+          font-weight: bold;
+          margin: 8px 0px;
+        }
+      }
+
+      .caption {
+        margin-top: 8px;
+        @include mq(xxl) {
+          position: absolute;
+          
+        }
+      }
+    }
+  }
+
+  .map {
+    position: relative;
+    width: 66.8%;
+    height: 0;
+    padding-top: 50.1%;
+    margin: 0 auto;
+    margin-top: 70px;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*===========================================================================
+# footer_message
+=========================================================================== */
+.footer_message {
+  background-image: url(../image/bg3.png);
+  padding: 60px 0;
+
+  .footer_menu {
+    display: flex;
+    justify-content: center;
+
+    .menu_item {
+      writing-mode: vertical-rl;
+
+      &:nth-child(2) {
+        margin: 0 18px;
+      }
+    }
+  }
+
+  .footer_logo {
+    width: 145px;
+    height: 92px;
+    margin: 0 auto;
+    margin-top: 96px;
+  }
+
+  .footer_info {
+    text-align: center;
+    .info_contents {
+      display: flex;
+      justify-content: center;
+      line-height: 1;
+
+      &:first-child {
+        margin: 72px 0 23px;
+      }
+
+      .info_content {
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .address {
+        letter-spacing: 2.88px;
+      } 
+    }
+  }
+}
+
+/*===========================================================================
+# footer
+=========================================================================== */
+footer {
+  background-color: #000000;
+  padding: 25px 0;
+  text-align: center;
+
+  .copyright {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
   }
 }
