@@ -26,27 +26,53 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <!-- common -->
     <link rel="stylesheet" href="css/style.css">
-     <!-- script -->
-    <script src="./js/script.js"></script>
+     
 
 </head>
 
 <body>
     <div class="header_top">
         <header>
-            <div class="left_block">
-                <div class="logo">
-                    <img src="./image/top-header-logo.png" alt="logo">
+            <div class="container">
+                <div class="pc_block">
+                    <div class="left_block">
+                        <div class="logo">
+                            <img src="./image/top-header-logo.png" alt="logo">
+                        </div>
+                        <div class="header_menu">
+                            <p class="menu_item"><a href="#">お部屋</a></p>
+                            <p class="menu_item"><a href="#">お料理</a></p>
+                            <p class="menu_item"><a href="#">温泉</a></p>
+                        </div>
+                    </div>
+        
+                    <div class="right_block">
+                        <button id='modal_show' class="reserve"><i class="far fa-calendar-alt fa-lg"></i>宿泊予約</button>
+                    </div>
                 </div>
-                <div class="header_menu">
-                    <p class="menu_item"><a href="#">お部屋</a></p>
-                    <p class="menu_item"><a href="#">お料理</a></p>
-                    <p class="menu_item"><a href="#">温泉</a></p>
-                </div>
+
             </div>
 
-            <div class="right_block">
-                <button class="reserve"><i class="far fa-calendar-alt fa-lg"></i>宿泊予約</button>
+            <div id="drawer" class="drawer">
+                <button type="button" id="js-hamburger" class="button hamburger" aria-controls="js-glabal-menu" aria-expanded="false" area-label="メニューを開閉する">
+                    <span class="hamburger__line">
+                    </span>
+                  </button>
+                  <div class="sp-global-menu" id="js-global-menu" area-hidden="true">
+                    <nav>
+                      <ul>
+                        <li class="drawer_list"><a href="">お部屋</a></li>
+                        <li class="drawer_list"><a href="">お料理</a></li>
+                        <li class="drawer_list"><a href="">温泉</a></li>
+                      </ul>
+                    </nav>
+                    <div class="right_block">
+                        <button id='modal_show' class="reserve"><i class="far fa-calendar-alt fa-lg"></i>宿泊予約</button>
+                    </div>
+
+                  </div><!-- /.sp-header-menu -->
+                  <div class="drawer-background" id="js-drawer-background"></div><!-- /.drawer-background -->
+
             </div>
         </header>
 
@@ -348,5 +374,38 @@
        
     </footer>
 
+    <div id="modal" class="modal">
+        <p class="modal_title">宿泊予約</p>
+        <form action="">
+            <div class="name_area contact-item">
+                <label class='name contact_title' for="name">お名前</label>
+                <input class="name_text" type="text" id="name" name="your-name" placeholder="例：石井正悟">
+            </div>
 
+            <div class="email_area contact-item">
+                <label class='email contact_title' for="name">お名前</label>
+                <input class="email_text" type="email" id="e-mail" name="your-email" placeholder="例：Example@example.com">
+            </div>
+
+            <div class="plan_area contact-item">
+                <label class='plan contact_title' for="plan">お名前</label>
+                <select name="your-select" id="plan" placeholder="選択してください">
+                    <option value="" style="display: none;">選択してください</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+
+            <div class="name_area contact-item">
+                <label class='plan contact_title' for="name">お名前</label>
+                <input class="name_text" type="text" id="name" name="your-name" placeholder="例：石井正悟">
+            </div>
+
+            <input id="js-submit" class="submit-area" type="submit" value="送信する" disabled>
+        </form>
+    </div>
+
+<!-- script -->
+<script src="./js/script.js"></script>
 </body>
