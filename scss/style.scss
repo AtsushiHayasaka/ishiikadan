@@ -57,125 +57,120 @@ body {
     }
   }
 
-/*===========================================================================
-# header_top
-=========================================================================== */
-  .header_top {
-    background-image: url(../image/mainbg01.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    min-height: 100vh;
-    background-origin: padding-box;
-
-   /* header
-   -------------------------------------------------------------------------- */
-
-      /* pc_block
-      -------------------------------------------------------------------------- */
-        .pc_block {
-            margin: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            position: fixed;
-            z-index: 10;
-            top: 0;
-            right: 0;
-            left: 0;
-            @include mq(sp) {
-              display: none;
-            }
-            
-            .left_block {
-                display: flex;
-                
-                .logo {
-                    margin: 20px 0;
-                    margin-right: 120px;
-                }
-
-                .header_menu {
-                    display: flex;
-                    justify-content: center;
-                    
-                    .menu_item {
-                        line-height: 80px;
-                        &:nth-child(2) {
-                            margin: 0 30px;
-                        }
-                        a {
-                            color: #FFFFFF;
-                            position: relative;
-
-                            &::after {
-                              content: "";
-                              position: absolute;
-                              left: 0px;
-                              bottom: -8px;
-                              width: 0;
-                              height: 1px;
-                              -webkit-transition: all 0.3s ease 0s;
-                              transition: all 0.3s ease 0s;
-                              background: #fff;
-                            }
-
-                            &:hover::after {
-                              width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-            
-        }
-
+  
+  /* header
+  -------------------------------------------------------------------------- */
+  
+  /* pc_block
+  -------------------------------------------------------------------------- */
+  .pc_block {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    @include mq(sp) {
+      display: none;
+    }
+    
+    .header_flex {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 20px;
       
-      /* drawer
-      -------------------------------------------------------------------------- */
-      .drawer  {
-        display: none;
-
-        @include mq(sp) {
-          display: block;
-          position: relative;
-
-          .button {
-            display: inline-block;
-            text-decoration: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-          }
-
-          .hamburger {
-            position: fixed;
-            top: 16px;
-            right: 4%;
-            z-index: 50;
-            width: 25px;
-            height: 25px;
-            
-            
-            .hamburger__line {
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              margin: auto;
-              width: 25px;
-              height: 2px;
-              background-color: #fff;
-              -webkit-transition: inherit;
-              transition: inherit;
-
-              &::before, &::after {
+      
+      .left_block {
+        display: flex;
+        
+        .logo {
+          margin: 20px 0;
+          margin-right: 120px;
+        }
+        
+        .header_menu {
+          display: flex;
+          justify-content: center;
+          
+          .menu_item {
+            line-height: 80px;
+            &:nth-child(2) {
+              margin: 0 30px;
+            }
+            a {
+              color: #FFFFFF;
+              position: relative;
+              
+              &::after {
+                content: "";
                 position: absolute;
-                display: block;
+                left: 0px;
+                bottom: -8px;
+                width: 0;
+                height: 1px;
+                -webkit-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+                background: #fff;
+              }
+              
+              &:hover::after {
+                width: 100%;
+              }
+            }
+                      }
+                    }
+                  }
+                  
+                }
+                
+                
+              }
+              
+              
+              /* drawer
+              -------------------------------------------------------------------------- */
+              .drawer  {
+                display: none;
+                
+                @include mq(sp) {
+                  display: block;
+                  position: relative;
+                  
+                  .button {
+                    display: inline-block;
+                    text-decoration: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                  }
+                  
+                  .hamburger {
+                    position: fixed;
+                    top: 16px;
+                    right: 4%;
+                    z-index: 50;
+                    width: 25px;
+                    height: 25px;
+                    
+                    
+                    .hamburger__line {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      left: 0;
+                      margin: auto;
+                      width: 25px;
+                      height: 2px;
+                      background-color: #fff;
+                      -webkit-transition: inherit;
+                      transition: inherit;
+                      
+                      &::before, &::after {
+                        position: absolute;
+                        display: block;
                 width: 100%;
                 height: 100%;
                 background-color: inherit;
@@ -192,10 +187,10 @@ body {
               }
             }       
           }
-
+          
           .hamburger[aria-expanded="true"] {
             border: 1px solid transparent !important;
-
+            
             .hamburger__line {
               background-color: transparent;
             }
@@ -216,9 +211,9 @@ body {
               -ms-transform: rotate(-45deg);
               transform: rotate(-45deg);
             }
-
+            
           }
-
+          
           .drawer-background {
             position: fixed;
             z-index: 3;
@@ -233,7 +228,7 @@ body {
             visibility: hidden;
             opacity: 0;
           }
-
+          
           .sp-global-menu {
             position: fixed;
             z-index: 4;
@@ -248,7 +243,7 @@ body {
             transform: translateX(280px);
             transition: 0.3s;
             text-align: center;
-
+            
             .drawer_list {
               font-size: 20px;
               margin: 20px 0;
@@ -261,24 +256,24 @@ body {
           
         }
       }
-
+      
       .is-drawerActive {
         .sp-global-menu {
           transform: translateX(0px);
           transition: 0.3s;
-      
+          
         }
         .drawer-background {
-      
-        visibility: visible;
-        opacity: 0.8;
-        transition: 0.3s;
+          
+          visibility: visible;
+          opacity: 0.8;
+          transition: 0.3s;
         }
       }
-
+      
       .right_block {
         .reserve {
-            line-height: 1;
+          line-height: 1;
             padding: 19px 37px;
             background-color: $color-active;
             color: #ffffff;
@@ -286,25 +281,32 @@ body {
 
             i {
                 margin-right: 10px;
-            }
+              }
         }
     }
+    
+    /* top
+    -------------------------------------------------------------------------- */
+.top {
+      background-image: url(../image/mainbg01.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        min-height: 100vh;
+        background-origin: padding-box;
+      
+      .top_word {
+        writing-mode: vertical-rl;
+        font-size: 34px;
+        font-weight: bold;
+        padding-top: 362px;
+        margin-left: 75%;
+        transform: translateX(-100%);
 
-  /* top
-  -------------------------------------------------------------------------- */
-    .top {
-        
-        .top_word {
-            writing-mode: vertical-rl;
-            font-size: 34px;
-            font-weight: bold;
-            padding-top: 362px;
-            margin-left: 75%;
-            transform: translateX(-100%);
-
-        }
+      }
     }
-  }
+
 
 /*===========================================================================
 # philosophy
@@ -613,7 +615,6 @@ section {
         margin-top: 8px;
         @include mq(xxl) {
           position: absolute;
-          
         }
       }
     }
@@ -736,4 +737,121 @@ footer {
 
 .is-modal {
   display: block;
+}
+
+
+/*===========================================================================
+# room.html
+=========================================================================== */
+
+#room {
+
+  .pc_block {
+    background: $color-background;
+    margin-right: 0;
+    margin-left: 0;
+  
+    .header_flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .menu_item {
+      a {
+        color: #000000;
+      }
+    }
+  
+  }
+  .top {
+    margin-top: 80px; 
+    background-image: url(../image/oheya-header.png);
+    min-height: 500px;
+    position: relative;
+    
+    .top_word {
+      margin-left: 0;
+      padding-top: 0;
+      writing-mode: horizontal-tb;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+     
+    }
+  }
+
+  /* breadclumb
+  -------------------------------------------------------------------------- */
+  .breadcrumb {
+    margin-top: 28px;
+  }
+
+  /*===========================================================================
+  # room_intro
+  =========================================================================== */
+
+  .room_intro {
+    margin-top: 82px;
+
+    .room_philosophy_area {
+      text-align: center;
+    }
+
+    .room_areas {
+      margin-top: 78px;
+      margin-bottom: 288px;
+    }
+    .room_area {
+      display: flex;
+      position: relative;
+      margin-top: 222px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .room_picture {
+        width: 44.5%;
+      }
+
+      .room_info {
+        position: absolute;
+        top: 80px;
+        right:0;
+        z-index: -1;
+        height: 381px;
+        padding-top: 60px;
+        padding-left: 238px;
+        background-image: url(../image/bg.png);
+        width: 813px;
+        padding-right: 60px;
+
+        .info_contents {
+          
+          .info_title {
+            font-size: 24px;
+            line-height: 1;
+          }
+
+          .info_content {
+            margin-top: 44px;
+            margin-bottom: 40.5px;
+          }
+        }
+        .caption {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .with_garden {
+      flex-direction: row-reverse;
+
+      .room_info {
+        right: auto;
+        left: 0;
+        padding-left: 60px;
+      }
+    }
+  }
 }

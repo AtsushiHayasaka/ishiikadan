@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石井花壇｜温海温泉旅館【公式サイト】</title>
+    <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+    <!--reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- ファビコン　-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Wow  -->
+    <script src="js/wow.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- common -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="room" class="room">
+    <header>
+        <div class="container">
+            <div class="pc_block">
+                <div class="header_flex">
+                    <div class="left_block">
+                        <div class="logo">
+                            <img src="./image/sub-header-logo.png" alt="logo">
+                        </div>
+                        <div class="header_menu">
+                            <p class="menu_item"><a href="#">お部屋</a></p>
+                            <p class="menu_item"><a href="#">お料理</a></p>
+                            <p class="menu_item"><a href="#">温泉</a></p>
+                        </div>
+                    </div>
+
+                    <div class="right_block">
+                        <button id='modal_show' class="reserve"><i class="far fa-calendar-alt fa-lg"></i>宿泊予約</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="drawer" class="drawer">
+            <button type="button" id="js-hamburger" class="button hamburger" aria-controls="js-glabal-menu"
+                aria-expanded="false" area-label="メニューを開閉する">
+                <span class="hamburger__line">
+                </span>
+            </button>
+            <div class="sp-global-menu" id="js-global-menu" area-hidden="true">
+                <nav>
+                    <ul>
+                        <li class="drawer_list"><a href="">お部屋</a></li>
+                        <li class="drawer_list"><a href="">お料理</a></li>
+                        <li class="drawer_list"><a href="">温泉</a></li>
+                    </ul>
+                </nav>
+                <div class="right_block">
+                    <button id='modal_show' class="reserve"><i class="far fa-calendar-alt fa-lg"></i>宿泊予約</button>
+                </div>
+
+            </div><!-- /.sp-header-menu -->
+            <div class="drawer-background" id="js-drawer-background"></div><!-- /.drawer-background -->
+
+        </div>
+    </header>
+
+    <div class="top">
+        <div class="top_word">
+            <p class="top_title">お部屋</p>
+        </div>
+
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <div class="container">
+                    <span property="itemListElement" typeof="ListItem">
+                        <a property="item" typeof="WebPage" href="/" class="home"><span property="name">トップ</span></a>
+                        <meta property="position" content="1">
+                    </span>
+                    <span>></span>
+                    <span class="current-item">お部屋</span>
+                </div>
+            </div><!-- /breadcrumb -->
+    
+            <div class="room_intro">
+                <div class="room_philosophy_area">
+                    <p class="room_philosophy">
+                        創業より受け継がれてきた石井花壇の和の造り<br>温海の雄大な絶景を堪能していただけるように設計された客室<br> ゆるやかに流れ行く時間に身を委ねて
+                    </p>
+    
+                </div>
+                <div class="room_areas">
+                    <div class="room_area">
+                        <div class="room_picture" >
+                            <img src="./image/oheya01.jpg" alt="">
+                        </div>
+    
+                        <div class="room_info with_onsen">
+                            <div class="info_contents">
+                                <p class="info_title">温泉付き客室</p>
+                                <p class="info_content">温海の源泉かけ流し露天風呂付き客室になります。<br>あなただけの上質な安らぎのひとときを。</p>
+                            </div>
+                            <p class="caption">＊部屋数に限りがございます。</p>
+                            <p class="caption">＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。</p>
+                            <div class="info_bg"></div>
+                        </div>
+                    </div>
+    
+                    <div class="room_area with_garden">
+                        <div class="room_picture">
+                            <img src="./image/oheya02.jpg" alt="">
+                        </div>
+    
+                        <div class="room_info">
+                            <div class="info_contents">
+                                <p class="info_title">庭園付き客室</p>
+                                <p class="info_content">庭園付きの客室になります。<br>お庭を見ながら、ほっとするひとときをお過ごしください。</p>
+                            </div>
+                            <p class="caption">＊お庭は複数のお客様と囲む形になります。</p>
+                            <p class="caption"> ＊部屋数に限りがあります。</p>
+                            <p class="caption"> ＊ご希望の方は「お抹茶/500円」をルームサービスさせていただきます。</p>
+                        </div>
+                    </div>
+    
+                    <div class="room_area with_basic">
+                        <div class="room_picture">
+                            <img src="./image/oheya03.jpg" alt="">
+                        </div>
+    
+                        <div class="room_info">
+                            <div class="info_contents">
+                                <p class="info_title">一般客室</p>
+                                <p class="info_content">最もベーシックな客室になります。伝統の中にモダンさを取り入れた<br>内装となっており、とても過ごしやすくしていただけます。</p>
+                            </div>
+                            <p class="caption">＊部屋数に限りがございます。</p>
+                      
+                        </div>
+                    </div>
+
+                </div>
+        
+            </div>
+
+        </div>
+    </main>
+
+    <div class="footer_message">
+        <div class="container">
+            <div class="footer_menu">
+                <p class="menu_item"><a href="#">温 泉</a></p>
+                <p class="menu_item"><a href="#">お 料 理</a></p>
+                <p class="menu_item"><a href="#">お 部 屋</a></p>
+            </div>
+
+            <div class="footer_logo">
+                <img src="./image/footer-logo.png" alt="">
+            </div>
+
+            <div class="footer_info">
+                <div class="info_contents">
+                    <p class="info_content">〒000-0000</p>
+                    <p class="info_content address">山形県鶴岡市xxxxxxxxxxx</p>
+                </div>
+
+                <div class="info_contents">
+                    <p class="info_content">TEL.000-0000-0000</p>
+                    <p class="info_content">FAX.00-0000-0000</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p class="copyright">Copyright © 石井花壇 All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <div id="modal" class="modal">
+        <p class="modal_title">宿泊予約</p>
+        <form action="">
+            <div class="name_area contact-item">
+                <label class='name contact_title' for="name">お名前</label>
+                <input class="name_text" type="text" id="name" name="your-name" placeholder="例：石井正悟">
+            </div>
+
+            <div class="email_area contact-item">
+                <label class='email contact_title' for="name">お名前</label>
+                <input class="email_text" type="email" id="e-mail" name="your-email"
+                    placeholder="例：Example@example.com">
+            </div>
+
+            <div class="plan_area contact-item">
+                <label class='plan contact_title' for="plan">お名前</label>
+                <select name="your-select" id="plan" placeholder="選択してください">
+                    <option value="" style="display: none;">選択してください</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+
+            <div class="name_area contact-item">
+                <label class='plan contact_title' for="name">お名前</label>
+                <input class="name_text" type="text" id="name" name="your-name" placeholder="例：石井正悟">
+            </div>
+
+            <input id="js-submit" class="submit-area" type="submit" value="送信する" disabled>
+        </form>
+    </div>
+    <!-- script -->
+    <script src="./js/script.js"></script>
+</body>
